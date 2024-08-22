@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Entity
 public class Address {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long AddressId;
 	private String currentaddress;
 }

@@ -16,17 +16,17 @@ import lombok.NoArgsConstructor;
 @Entity
 public class CustomerEnquiry {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long CustomerId;
-	private String CustomerName;
-	private String Email;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long customerId;
+	private String customerName;
+	private String email;
 	private long mobile;
 	private String gender;
 	private long pancard;
-	private String DOB;
+	private String dob;
 	private String remark;
 	@OneToOne(cascade = CascadeType.ALL)
 	private Address address;
-//	@OneToOne(cascade = CascadeType.DETACH.MERGE.REMOVE.REFRESH)
-//	private CibilScore cibil;
+	@OneToOne(cascade = CascadeType.DETACH.MERGE.REMOVE.REFRESH)
+	private CibilScore cibil;
 }
