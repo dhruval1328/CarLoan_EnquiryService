@@ -19,7 +19,7 @@ public class EnquiryController {
 	
 	@PostMapping("/enquiry")
 	public ResponseEntity<CustomerEnquiry> enquirydata(@RequestBody CustomerEnquiry ce) {
-		
+		System.out.println(ce.toString());
 		CustomerEnquiry c = esi.savedata(ce);
 		ResponseEntity<CustomerEnquiry> re = new ResponseEntity<CustomerEnquiry>(c, HttpStatus.OK);
 		return re;

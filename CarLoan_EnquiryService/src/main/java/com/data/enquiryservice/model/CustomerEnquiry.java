@@ -2,6 +2,8 @@ package com.data.enquiryservice.model;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
@@ -14,6 +16,7 @@ import lombok.NoArgsConstructor;
 @Entity
 public class CustomerEnquiry {
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long CustomerId;
 	private String CustomerName;
 	private String Email;
