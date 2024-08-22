@@ -27,6 +27,5 @@ public class CustomerEnquiry {
 	private String remark;
 	@OneToOne(cascade = CascadeType.ALL)
 	private Address address;
-	@OneToOne(cascade = CascadeType.DETACH.MERGE.REMOVE.REFRESH)
-	private CibilScore cibil;
+	
 }
